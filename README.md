@@ -35,11 +35,15 @@ Before transferring data to PC, it is important to pause logging by clicking "st
     $ python3 tklamp.py serial_port_name 
     ```
 
-3. Start measurement. You can view live plot by navigating to the plotting page on tester. Once done, pause measurement using "Stop Recording" button.
+3. Start measurement.
 
-5. Transfer data to PC. Click on "Transfer Data" button on tester, now you have 10 seconds to run the script in step 2.
+   You can view live plot by navigating to the plotting page on tester. Once done, pause measurement using "Stop Recording" button.
 
-    Once finished, you should see confirmation message in terminal.  
+4. Transfer data to PC. 
+
+   Click on "Transfer Data" button on tester, run the script in step 2 in the next 10 seconds. It must be done before the countdown on tester turns 0. 
+
+   Once data transfer is finished, you should see confirmation message in terminal.  
     ```
     >>>
        ------------------------------------------------------------
