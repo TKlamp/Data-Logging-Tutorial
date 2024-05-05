@@ -9,14 +9,13 @@ Install the following packages.
 $ pip install serial, sys, pandas, matplotlib.pyplot, tqdm
 ```
 
-TK2303E does not support live logging. Data is saved to tester first and transferred all together to PC.
-Before transferring data to PC, it is important to pause logging by clicking "stop recording" button on tester. 
+TK2303E does not support live logging, as data is saved first to the tester before being transferred to a PC. It is essential to pause logging by clicking the "stop recording" button on the tester before initiating the transfer process.
 
-## Quickstart 
+## Quickstart
 
 1. Connect USB to PC, turn on tester.
    
-    Find current USB serial port name.
+    Find the name of the current USB serial port using command below. 
     
     ```
     $ ls /dev/tty.*  
@@ -29,21 +28,20 @@ Before transferring data to PC, it is important to pause logging by clicking "st
     /dev/tty.usbserial-14440  #your serial_port_name
     ```
 
-2. Get script ready in terminal, but DO NOT RUN it yet.
+2. Get script ready to run in terminal, but DO NOT RUN it yet. 
 
     ```
     $ python3 tklamp.py serial_port_name 
     ```
 
-3. Start measurement.
+3. Start measurement on tester.
 
-   You can view live plot by navigating to the plotting page on tester. Once done, pause measurement using "Stop Recording" button.
+   You can view live plot by navigating to the plotting page. Once done, pause measurement using "Stop Recording" button.
 
 4. Transfer data to PC. 
 
-   Click on "Transfer Data" button on tester, run the script in step 2 in the next 10 seconds. It must be done before the countdown on tester turns 0. 
-
-   Once data transfer is finished, you should see confirmation message in terminal.  
+   Click on the "Transfer Data" button on the tester. Within the next 10 seconds, execute the tklamp.py script with the command specified in step 2. Script must be executed before the countdown for data transfer reaches 0.
+   After the data transfer is complete, the terminal will return a confirmation message.  
     ```
     >>>
        ------------------------------------------------------------
@@ -61,9 +59,9 @@ Before transferring data to PC, it is important to pause logging by clicking "st
 ## Troubleshooting 
 
 - Reboot your tester and run the script again.
-- Do make sure "recording" is paused before transferring data.
-- Only run script within 10 seconds upon tringgering data transfer button. Too soon or too late may lead to error. 
-- Altering the order of steps may lead to error or receive irrelevant data. 
+- When transferring data, ensure that "recording" is paused to avoid any issues.
+- It is crucial to run the script within 10 seconds of triggering the data transfer button. Running it too soon or too late may result in errors. 
+- Changing the order of steps could potentially lead to errors or result in receiving irrelevant data.
 
 
 
