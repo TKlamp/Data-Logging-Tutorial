@@ -9,7 +9,7 @@ Install the following packages.
 $ pip install serial, sys, pandas, matplotlib.pyplot, tqdm
 ```
 
-TK2303 does not support live logging. Data is saved to tester first and transferred in the end to PC.
+TK2303E does not support live logging. Data is saved to tester first and transferred all together to PC.
 Before transferring data to PC, it is important to pause logging by clicking "stop recording" button on tester. 
 
 ## Quickstart 
