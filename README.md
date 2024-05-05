@@ -56,9 +56,10 @@ Before transferring data to PC, it is important to pause logging by clicking "st
 
 ## Troubleshooting 
 
-The easist way is to reboot your tester and run the script again. Make you "recording" is paused before transferring data. Only run script within 10 seconds after tringgering data transfer button.
-
-Alter the ordering may lead to error or receving irrelevant data. 
+- Reboot your tester and run the script again.
+- Do make sure "recording" is paused before transferring data.
+- Only run script within 10 seconds upon tringgering data transfer button. Too soon or too late may lead to error. 
+- Altering the order of steps may lead to error or receive irrelevant data. 
 
 
 
