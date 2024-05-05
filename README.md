@@ -2,7 +2,7 @@
 
 ## Installation & Setup
 
-Download tklamp.py. 
+Download [tklamp.py](/tklamp.py). 
 
 Install the following packages. 
 ```
@@ -37,7 +37,7 @@ Before transferring data to PC, it is important to pause logging by clicking "st
 
 3. Start measurement. You can view live plot by navigating to the plotting page on tester. Once done, pause measurement using "Stop Recording" button.
 
-5. Start transfer. Click on "Transfer Data" button on tester, now you have 10 seconds to run the script in step 2.
+5. Transfer data to PC. Click on "Transfer Data" button on tester, now you have 10 seconds to run the script in step 2.
 
     Once finished, you should see confirmation message in terminal.  
     ```
@@ -51,5 +51,14 @@ Before transferring data to PC, it is important to pause logging by clicking "st
        ------------------------------------------------------------
     ```
     > What happens if I missed the 10s window or run them in the wrong order?
-    Stop python script if it is running with `ctrl + c`. On tester, exit data transfer popup window. Then repeat step 4. 
+    Stop python script if it is running with `ctrl + c`. On tester, exit data transfer popup window. Then repeat step 4.
+
+
+## Troubleshooting 
+
+The easist way is to reboot your tester and run the script again. Make you "recording" is paused before transferring data. Only run script within 10 seconds after tringgering data transfer button.
+
+Alter the ordering may lead to error or receving irrelevant data. 
+
+
 
