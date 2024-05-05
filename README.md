@@ -50,8 +50,8 @@ Before transferring data to PC, it is important to pause logging by clicking "st
        # Lux multiples: 1
        ------------------------------------------------------------
     ```
-    > What happens if I missed the 10s window or run them in the wrong order?
-    Stop python script if it is running with `ctrl + c`. On tester, exit data transfer popup window. Then repeat step 4.
+    > What happens if I missed the 10s window or run steps in the wrong order?
+    > Stop python script if it is running with `ctrl + c`. On tester, exit data transfer popup window. Repeat step 4.
 
 
 ## Troubleshooting 
