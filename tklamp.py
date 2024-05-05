@@ -1,4 +1,4 @@
-#!/usr/bin/env python # [1]
+#!/usr/bin/env python 
 """
 This script reads 3620-byte raw serial data from TKlamp flashlight tester (2303E) and decodes it to a .csv file with 3 columns (lumen/candela/lux). 
 """
