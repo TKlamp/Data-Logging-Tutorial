@@ -21,7 +21,7 @@ def generator():
 def main(): 
    # Verify if user input includes serial port 
    if (len(sys.argv) != 2):
-      print("command line: tklamp.py serial_port")
+      print("Command line: tklamp.py serial_port")
       sys.exit()
    port = sys.argv[1]
 
