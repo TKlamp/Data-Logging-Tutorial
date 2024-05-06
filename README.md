@@ -1,5 +1,7 @@
 # Data-Logging-Tutorial
 
+Quickstart guide to exporting TK2303E measurement data to PC in .csv. 
+
 ## Installation & Setup
 
 Download [tklamp.py](/tklamp.py). 
@@ -63,5 +65,8 @@ TK2303E does not support live logging, as data is saved first to the tester befo
 - It is crucial to run the script within 10 seconds of triggering the data transfer button. Running it too soon or too late may result in errors. 
 - Changing the order of steps could potentially lead to errors or result in receiving irrelevant data.
 
+
+## Video
+[![Youtube](https://img.youtube.com/vi/NJ26TU5rA78/0.jpg)](https://www.youtube.com/watch?v=NJ26TU5rA78)
 
 
