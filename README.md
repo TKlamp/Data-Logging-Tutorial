@@ -1,6 +1,6 @@
 # Data-Logging-Tutorial
 
-Quickstart guide to exporting TK2303E measurement data to PC in .csv. 
+Quickstart guide to exporting TK2303D measurement data to PC in csv. 
 
 ## Installation & Setup
 
@@ -11,7 +11,7 @@ Install the following packages.
 $ pip install serial, sys, pandas, matplotlib.pyplot, tqdm
 ```
 
-TK2303E does not support live logging, as data is saved first to the tester before being transferred to a PC. It is essential to pause logging by clicking the "stop recording" button on the tester before initiating the transfer process.
+TK2303D does not support live logging, as data is saved first to the tester before being transferred to a PC. It is essential to pause logging by clicking the "stop recording" button on the tester before initiating the transfer process.
 
 ## Quickstart
 
@@ -36,7 +36,7 @@ TK2303E does not support live logging, as data is saved first to the tester befo
     $ python3 tklamp.py serial_port_name 
     ```
 
-3. Start measurement on tester.
+3. Start measurement.
 
    You can view live plot by navigating to the plotting page. Once done, pause measurement using "Stop Recording" button.
 
