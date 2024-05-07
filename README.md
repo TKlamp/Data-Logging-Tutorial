@@ -43,6 +43,7 @@ TK2303D does not support live logging, as data is saved first to the tester befo
 4. Transfer data to PC. 
 
    Click on the "Transfer Data" button on the tester. Within the next 10 seconds, execute the tklamp.py script with the command specified in step 2. Script must be executed before the countdown for data transfer reaches 0.
+   
    After the data transfer is complete, the terminal will return a confirmation message.  
     ```
     >>>
