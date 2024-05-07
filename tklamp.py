@@ -63,7 +63,7 @@ def main():
    log_dict_pd["lux"] =  log_dict_pd["lux"].apply(lambda x: x * lux_multi)
 
    # Save result to csv
-   filename = (f"Output_{pandas.to_datetime('now').strftime('%Y-%m-%d at %H:%M:%S')}.csv")
+   filename = (f"Output_{pandas.to_datetime('now').strftime('%Y-%m-%d-%H:%M:%S')}.csv")
    log_dict_pd.to_csv(filename, index=True)
 
    # Print confirmation message
