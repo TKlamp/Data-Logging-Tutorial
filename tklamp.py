@@ -1,8 +1,6 @@
-#!/usr/bin/env python 
-"""
-This script reads 3620-byte raw serial data from TKlamp flashlight tester (2303E) and decodes it to a .csv file with 3 columns (lumen/candela/lux). 
-"""
-import serial, sys, pandas, matplotlib.pyplot, tqdm
+#!/usr/bin/env python
+
+import serial, sys, pandas, matplotlib.pyplot, tqdm, datetime
 
 def byte_concant(lst):
    """ 
@@ -21,7 +19,7 @@ def generator():
 def main(): 
    # Verify if user input includes serial port 
    if (len(sys.argv) != 2):
-      print("Command line: tklamp.py serial_port")
+      print("command line: tklamp.py serial_port")
       sys.exit()
    port = sys.argv[1]
 
@@ -36,7 +34,7 @@ def main():
                'candela': [],
                    'lux': [],}
 
-   # Read serial data and save raw data to log list
+   # Read serial data and save to log list
    for _ in tqdm.tqdm(generator()):  # progress bar 
          count += 1
          x = ser.read()
@@ -44,7 +42,7 @@ def main():
          if count == 3620:  
             break 
 
-   # Decoding raw data saved to log list
+   # Decoding byte data from log list
    # Header: 1-16 byte
    header = byte_concant(log[:16])
    sampling_time = header[2]
@@ -63,7 +61,8 @@ def main():
    log_dict_pd["lux"] =  log_dict_pd["lux"].apply(lambda x: x * lux_multi)
 
    # Save result to csv
-   filename = (f"Output_{pandas.to_datetime('now').strftime('%Y-%m-%d-%H:%M:%S')}.csv")
+   current_datetime = datetime.datetime.now().strftime("%Y-%m-%d-%H.%M.%S")
+   filename = "Output" + str(current_datetime) + ".csv"
    log_dict_pd.to_csv(filename, index=True)
 
    # Print confirmation message
