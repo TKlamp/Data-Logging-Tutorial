@@ -4,6 +4,8 @@ Quickstart guide to exporting TK2303D measurement data to PC in csv.
 
 ## Installation & Setup
 
+> This guide is created for MacOS. For Linux, refer to [notes](https://gist.github.com/flashlightstuff/fc9b65e3d4a158d985975968c78b4522) shared by @nescobar
+
 Download [tklamp.py](/tklamp.py). 
 
 Install the following packages. 
@@ -56,7 +58,7 @@ TK2303D does not support live logging, as data is saved first to the tester befo
        ------------------------------------------------------------
     ```
     > What happens if I missed the 10s window or run steps in the wrong order?
-    > Stop python script if it is running with `ctrl + c`. On tester, exit data transfer popup window. Repeat step 4.
+    > Stop python script using `ctrl + c` if it is still running. Exit data transfer popup window on the tester. Repeat step 4.
 
 
 ## Troubleshooting 
