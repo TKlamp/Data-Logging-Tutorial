@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import serial, sys, pandas, matplotlib.pyplot, tqdm, datetime
+import serial, sys, pandas, matplotlib.pyplot, tqdm, datetime, json
 
 def byte_concant(lst):
    """ 
@@ -65,6 +65,19 @@ def main():
    filename = "Output" + str(current_datetime) + ".csv"
    log_dict_pd.to_csv(filename, index=True)
 
+   # Save metadata to json 
+   meta_dict={
+    'Export csv file name': filename,
+    'Sampling time (ms)': sampling_time,
+    'Distance to surface (cm)': distance_to_surface,
+    'Candela multiples': candela_multi,
+    'Lux multiples': lux_multi
+   }
+
+   jsonname = "Metadata" + str(current_datetime) + ".json"
+   with open(jsonname, 'w') as f:
+      json.dump(meta_dict, f)
+      
    # Print confirmation message
    cfm_msg = f'''
    {'-'*60}
