@@ -10,7 +10,7 @@ Download [tklamp.py](/tklamp.py).
 
 Install the following packages. 
 ```
-$ pip install pyserial, sys, pandas, matplotlib, tqdm, datetime
+$ pip install pyserial sys pandas matplotlib tqdm datetime
 ```
 
 TK2303D does not support live logging, as data is saved first to the tester before being transferred to a PC. It is essential to pause logging by clicking the "stop recording" button on the tester before initiating the transfer process.
